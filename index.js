@@ -10,7 +10,7 @@ var db, id;
 fs.readFile(`./data.json`, 'utf8', (err, file) => { db = JSON.parse(file); id = db.length ? Math.max(...db.map(data => data[0])) : 0; id++ })
 setInterval(() => fs.writeFileSync(`./data.json`, JSON.stringify(db)), 10000)
 
-const client = new Wasteof2Auth('chat-history', process.env.password)
+const client = new Wasteof2Auth('my-chatbot', 'x2058329')
 
 const html = fs.readFileSync('./public/index.html')
 
